@@ -50,7 +50,7 @@ namespace dotnetHealthcheck {
             app.UseRouting ();
 
             //checker default router
-            app.UseHealthChecks ("/hc");
+            app.UseHealthChecks ("/hc",new CustomHealthCheckOptions());
 
             app.UseEndpoints (endpoints => {
                 endpoints.MapControllerRoute (
